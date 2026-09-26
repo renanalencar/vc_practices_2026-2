@@ -19,15 +19,14 @@ NOTEBOOKS=(
 	"BatchNormalization.ipynb"
 	"Dropout.ipynb"
 	"ConvolutionalNetworks.ipynb"
-	"PyTorch.ipynb"
 )
 
 FILES=( "${CODE[@]}" "${NOTEBOOKS[@]}" )
 
 LOCAL_DIR=`pwd`
-ASSIGNMENT_NO=2
-ZIP_FILENAME="a2_code_submission.zip"
-PDF_FILENAME="a2_inline_submission.pdf"
+ASSIGNMENT_NO=4
+ZIP_FILENAME="l4_codigo_submissao.zip"
+PDF_FILENAME="l4_em_linha_submissao.pdf"
 
 C_R="\e[31m"
 C_G="\e[32m"
@@ -44,9 +43,13 @@ done
 
 echo -e "### Zipping file ###"
 rm -f ${ZIP_FILENAME}
-zip -q "${ZIP_FILENAME}" -r ${NOTEBOOKS[@]} $(find . -name "*.py") $(find . -name "*.pyx") -x "makepdf.py"
+zip -q "${ZIP_FILENAME}" -r ${NOTEBOOKS[@]} $(find . -name "*.py") $(find . -name "*.pyx") -x "../scripts/makepdf.py"
 
 echo -e "### Creating PDFs ###"
-python makepdf.py --notebooks "${NOTEBOOKS[@]}" --pdf_filename "${PDF_FILENAME}"
+python ../scripts/makepdf.py --notebooks "${NOTEBOOKS[@]}" --pdf_filename "${PDF_FILENAME}"
+
+echo -e "### Moving submission files to submissions directory ###"
+mv ${ZIP_FILENAME} ../../submissions/
+mv ${PDF_FILENAME} ../../submissions/
 
 echo -e "### Done! Please submit ${ZIP_FILENAME} and ${PDF_FILENAME} to Gradescope. ###"

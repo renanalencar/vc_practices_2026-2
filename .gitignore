@@ -139,3 +139,4 @@ Thumbs.db
 data
 src/notebooks/cs231n/datasets/cifar-10-batches-py
 src/notebooks/cs231n/datasets/imagenet_val_25.npz
+submissions/

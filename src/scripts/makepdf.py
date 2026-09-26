@@ -12,17 +12,22 @@ except ImportError:
 
 
 def main(files, pdf_name):
-    os_args = [
-        "jupyter",
-        "nbconvert",
-        "--log-level",
-        "CRITICAL",
-        "--to",
-        "pdf",
-    ]
+    import sys
     for f in files:
-        os_args.append(f)
-        subprocess.run(os_args)
+        cmd = [
+            sys.executable,
+            "-m",
+            "jupyter",
+            "nbconvert",
+            "--to",
+            "pdf",
+            f,
+        ]
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            print(f"Error converting {f} to PDF:")
+            print(result.stderr)
+            sys.exit(1)
         print("Created PDF {}.".format(f))
     if MERGE:
         pdfs = [f.split(".")[0] + ".pdf" for f in files]

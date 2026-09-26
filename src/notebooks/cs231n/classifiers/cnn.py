@@ -63,7 +63,20 @@ class ThreeLayerConvNet(object):
         ############################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-        pass
+        # Inicializa W1 e b1 da camada convolucional
+        C, H, W = input_dim
+        self.params['W1'] = np.random.normal(0, weight_scale, (num_filters, C, filter_size, filter_size))
+        self.params['b1'] = np.zeros(num_filters)
+        
+        # Inicializa W2 e b2 da camada afim escondida
+        # A saída da camada de pooling será (num_filters, H/2, W/2)
+        pool_out_dim = num_filters * (H // 2) * (W // 2)
+        self.params['W2'] = np.random.normal(0, weight_scale, (pool_out_dim, hidden_dim))
+        self.params['b2'] = np.zeros(hidden_dim)
+        
+        # Inicializa W3 e b3 da camada afim de saída
+        self.params['W3'] = np.random.normal(0, weight_scale, (hidden_dim, num_classes))
+        self.params['b3'] = np.zeros(num_classes)
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         ############################################################################
@@ -102,7 +115,10 @@ class ThreeLayerConvNet(object):
         ############################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-        pass
+        # Forward pass da rede convolucional de três camadas
+        out1, cache1 = conv_relu_pool_forward(X, W1, b1, conv_param, pool_param)
+        out2, cache2 = affine_relu_forward(out1, W2, b2)
+        scores, cache3 = affine_forward(out2, W3, b3)
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         ############################################################################
@@ -125,7 +141,24 @@ class ThreeLayerConvNet(object):
         ############################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-        pass
+        # Calcula o gradiente e o loss usando softmax
+        loss, dscores = softmax_loss(scores, y)
+        
+        # Adiciona regularização L2 à perda
+        loss += 0.5 * self.reg * (np.sum(W1**2) + np.sum(W2**2) + np.sum(W3**2))
+        
+        # Backpropagation
+        dout2, dw3, db3 = affine_backward(dscores, cache3)
+        dout1, dw2, db2 = affine_relu_backward(dout2, cache2)
+        dx, dw1, db1 = conv_relu_pool_backward(dout1, cache1)
+        
+        # Adiciona gradientes de regularização
+        grads['W3'] = dw3 + self.reg * W3
+        grads['b3'] = db3
+        grads['W2'] = dw2 + self.reg * W2
+        grads['b2'] = db2
+        grads['W1'] = dw1 + self.reg * W1
+        grads['b1'] = db1
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         ############################################################################

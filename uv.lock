@@ -1695,6 +1695,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pypdf2"
+version = "3.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/9f/bb/18dc3062d37db6c491392007dfd1a7f524bb95886eb956569ac38a23a784/PyPDF2-3.0.1.tar.gz", hash = "sha256:a74408f69ba6271f71b9352ef4ed03dc53a31aa404d29b5d31f53bfecfee1440", size = 227419, upload-time = "2022-12-31T10:36:13.13Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8e/5e/c86a5643653825d3c913719e788e41386bee415c2b87b4f955432f2de6b2/pypdf2-3.0.1-py3-none-any.whl", hash = "sha256:d16e4205cfee272fbdc0568b68d82be796540b1537508cef59388f839c191928", size = 232572, upload-time = "2022-12-31T10:36:10.327Z" },
+]
+
+[[package]]
 name = "pyrsistent"
 version = "0.20.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2068,6 +2077,15 @@ wheels = [
 ]
 
 [[package]]
+name = "setuptools"
+version = "84.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6d/44/f5da03a8ef95d369145c5bb53050e7877c9f3d312e128605fd9504829143/setuptools-84.0.0.tar.gz", hash = "sha256:f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73", size = 1168449, upload-time = "2026-08-08T18:27:58.365Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/95/9c/c510029fc6ef33a6275cd2c5d3cecd6613dfd6aa401d57c54f1c18852ccf/setuptools-84.0.0-py3-none-any.whl", hash = "sha256:51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670", size = 818216, upload-time = "2026-08-08T18:27:56.719Z" },
+]
+
+[[package]]
 name = "six"
 version = "1.17.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2269,6 +2287,7 @@ dependencies = [
     { name = "ptyprocess" },
     { name = "pygments" },
     { name = "pyparsing" },
+    { name = "pypdf2" },
     { name = "pyrsistent" },
     { name = "python-dateutil" },
     { name = "pyzmq" },
@@ -2276,6 +2295,7 @@ dependencies = [
     { name = "requests" },
     { name = "scipy" },
     { name = "send2trash" },
+    { name = "setuptools" },
     { name = "six" },
     { name = "smmap2" },
     { name = "terminado" },
@@ -2337,6 +2357,7 @@ requires-dist = [
     { name = "ptyprocess", specifier = ">=0.7.0" },
     { name = "pygments", specifier = ">=2.21.0" },
     { name = "pyparsing", specifier = ">=3.3.2" },
+    { name = "pypdf2", specifier = ">=3.0.1" },
     { name = "pyrsistent", specifier = ">=0.20.0" },
     { name = "python-dateutil", specifier = ">=2.9.0.post0" },
     { name = "pyzmq", specifier = ">=27.2.0" },
@@ -2344,6 +2365,7 @@ requires-dist = [
     { name = "requests", specifier = ">=2.34.2" },
     { name = "scipy", specifier = ">=1.18.1" },
     { name = "send2trash", specifier = ">=2.1.0" },
+    { name = "setuptools", specifier = ">=84.0.0" },
     { name = "six", specifier = ">=1.17.0" },
     { name = "smmap2", specifier = ">=3.0.1" },
     { name = "terminado", specifier = ">=0.18.1" },
