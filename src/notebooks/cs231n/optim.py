@@ -108,8 +108,8 @@ def rmsprop(w, dw, config=None):
     ###########################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    config["cache"] = config["decay_rate"] * config["cache"] + (1 - config["decay_rate"]) * (dw ** 2)
-    next_w = w - config["learning_rate"] * dw / (np.sqrt(config["cache"]) + config["epsilon"])
+    config["cache"] = config["decay_rate"] * config["cache"] + (1 - config["decay_rate"]) * (dw ** 2)  # Atualiza a média dos gradientes ao quadrado.
+    next_w = w - config["learning_rate"] * dw / (np.sqrt(config["cache"]) + config["epsilon"])  # Calcula os novos pesos.
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ###########################################################################
@@ -154,14 +154,14 @@ def adam(w, dw, config=None):
     ###########################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    config["t"] += 1
-    config["m"] = config["beta1"] * config["m"] + (1 - config["beta1"]) * dw
-    config["v"] = config["beta2"] * config["v"] + (1 - config["beta2"]) * (dw ** 2)
+    config["t"] += 1  # avança o contador de iterações
+    config["m"] = config["beta1"] * config["m"] + (1 - config["beta1"]) * dw  # média móvel do gradiente
+    config["v"] = config["beta2"] * config["v"] + (1 - config["beta2"]) * (dw ** 2)  # média móvel do gradiente ao quadrado
 
-    mt = config["m"] / (1 - config["beta1"] ** config["t"])
-    vt = config["v"] / (1 - config["beta2"] ** config["t"])
+    mt = config["m"] / (1 - config["beta1"] ** config["t"])  # corrige o viés da primeira média móvel
+    vt = config["v"] / (1 - config["beta2"] ** config["t"])  # corrige o viés da segunda média móvel
 
-    next_w = w - config["learning_rate"] * mt / (np.sqrt(vt) + config["epsilon"])
+    next_w = w - config["learning_rate"] * mt / (np.sqrt(vt) + config["epsilon"])  # aplica a atualização de Adam
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ###########################################################################

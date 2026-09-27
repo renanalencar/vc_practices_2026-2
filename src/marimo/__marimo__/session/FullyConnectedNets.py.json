@@ -1,0 +1,343 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.25.0",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-ui-element object-id='Hbol-0' random-id='b9d819ba-b4c3-f2e1-30ed-0accdd2371a9'><marimo-anywidget data-initial-value='{&quot;model_id&quot;:&quot;13afab4bf86544deaea13334fd094417&quot;}' data-label='null' data-model-id='&quot;13afab4bf86544deaea13334fd094417&quot;'></marimo-anywidget></marimo-ui-element></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "5d1879833e3d8338a7dad81b19a077d7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "awLU",
+      "code_hash": "2397fd624adaff07556c780c78dfbe37",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "No module named 'google'",
+          "traceback": null
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">\"/tmp/marimo_358712/__marimo__cell_awLU_.py\"</span>, line <span class=\"m\">2</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">google.colab</span><span class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">drive</span>\n<span class=\"gr\">ModuleNotFoundError</span>: <span class=\"n\">No module named 'google'</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "2f9daf855657e4ace210eb1de5ba3c0f",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (ModuleNotFoundError): ",
+          "traceback": null
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "bd4d928288e5700442314a8467ec319f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"multi-layer-fully-connected-network\">Multi-Layer Fully Connected Network</h1>\n<span class=\"paragraph\">In this exercise, you will implement a fully connected network with an arbitrary number of hidden layers.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "7ff18b4b42357d0e5123e68ee0c9c37e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Read through the <code>FullyConnectedNet</code> class in the file <code>cs231n/classifiers/fc_net.py</code>.</span>\n<span class=\"paragraph\">Implement the network initialization, forward pass, and backward pass. Throughout this assignment, you will be implementing layers in <code>cs231n/layers.py</code>. You can re-use your implementations for <code>affine_forward</code>, <code>affine_backward</code>, <code>relu_forward</code>, <code>relu_backward</code>, and <code>softmax_loss</code> from Assignment 1. For right now, don't worry about implementing dropout or batch/layer normalization yet, as you will add those features later.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "9b66c565b7b05b47c6817677eba60b3f",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "import-star",
+          "evalue": "line 7 SyntaxError: Importing symbols with `import *` is not allowed in marimo.",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "bf712c736190d3c8f38ad55c75c52e6c",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "name 'get_CIFAR10_data' is not defined",
+          "traceback": null
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">\"/tmp/marimo_358712/__marimo__cell_SFPL_.py\"</span>, line <span class=\"m\">2</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"n\">data</span> <span class=\"o\">=</span> <span class=\"n\">get_CIFAR10_data</span><span class=\"p\">()</span>\n<span class=\"w\">           </span><span class=\"pm\">^^^^^^^^^^^^^^^^</span>\n<span class=\"gr\">NameError</span>: <span class=\"n\">name 'get_CIFAR10_data' is not defined</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "976d23c67776c5b5449bf1c97e18313d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"initial-loss-and-gradient-check\">Initial Loss and Gradient Check</h2>\n<span class=\"paragraph\">As a sanity check, run the following to check the initial loss and to gradient check the network both with and without regularization. This is a good way to see if the initial losses seem reasonable.</span>\n<span class=\"paragraph\">For gradient checking, you should expect to see errors around 1e-7 or less.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "dfea6ddb596d6b4634501f7a5aae95e9",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "b4e6e3590b07d46499d1ed44f893cc6d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">As another sanity check, make sure your network can overfit on a small dataset of 50 images. First, we will try a three-layer network with 100 units in each hidden layer. In the following cell, tweak the <strong>learning rate</strong> and <strong>weight initialization scale</strong> to overfit and achieve 100% training accuracy within 20 epochs.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "fcd3437797d2ae8ad93ff0b084547316",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "f9869291fb7da3f4e50efed68989dc48",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Now, try to use a five-layer network with 100 units on each layer to overfit on 50 training examples. Again, you will have to adjust the learning rate and weight initialization scale, but you should be able to achieve 100% training accuracy within 20 epochs.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "e84635a7969f709e2970855a1b8f5010",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "669fce966e3696dd2fbfd059dafead4d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"inline-question-1\">Inline Question 1:</h2>\n<span class=\"paragraph\">Did you notice anything about the comparative difficulty of training the three-layer network vs. training the five-layer network? In particular, based on your experience, which network seemed more sensitive to the initialization scale? Why do you think that is the case?</span>\n<h2 id=\"answer\">Answer:</h2>\n<span class=\"paragraph\">[FILL THIS IN]</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "8480845472046d77619ec5e50df807e2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"update-rules\">Update rules</h1>\n<span class=\"paragraph\">So far we have used vanilla stochastic gradient descent (SGD) as our update rule. More sophisticated update rules can make it easier to train deep networks. We will implement a few of the most commonly used update rules and compare them to vanilla SGD.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "62cf40b085e44b2f43c1fd427bc043f7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"sgdmomentum\">SGD+Momentum</h2>\n<span class=\"paragraph\">Stochastic gradient descent with momentum is a widely used update rule that tends to make deep networks converge faster than vanilla stochastic gradient descent. See the Momentum Update section at <a href=\"http://cs231n.github.io/neural-networks-3/#sgd\" rel=\"noopener noreferrer\" target=\"_blank\">http://cs231n.github.io/neural-networks-3/#sgd</a> for more information.</span>\n<span class=\"paragraph\">Open the file <code>cs231n/optim.py</code> and read the documentation at the top of the file to make sure you understand the API. Implement the SGD+momentum update rule in the function <code>sgd_momentum</code> and run the following to check your implementation. You should see errors less than e-8.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "56be8f8561771c844ddd7b8ff67a7004",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "2427c91ab9eae4122f164876456ddac7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Once you have done so, run the following to train a six-layer network with both SGD and SGD+momentum. You should see the SGD+momentum update rule converge faster.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "8faea643963b970b34537f6f64defac3",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "d01d117f6670dbab16243200d7374b8f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"rmsprop-and-adam\">RMSProp and Adam</h2>\n<span class=\"paragraph\">RMSProp [1] and Adam [2] are update rules that set per-parameter learning rates by using a running average of the second moments of gradients.</span>\n<span class=\"paragraph\">In the file <code>cs231n/optim.py</code>, implement the RMSProp update rule in the <code>rmsprop</code> function and implement the Adam update rule in the <code>adam</code> function, and check your implementations using the tests below.</span>\n<span class=\"paragraph\"><strong>NOTE:</strong> Please implement the <em>complete</em> Adam update rule (with the bias correction mechanism), not the first simplified version mentioned in the course notes.</span>\n<span class=\"paragraph\">[1] Tijmen Tieleman and Geoffrey Hinton. \"Lecture 6.5-rmsprop: Divide the gradient by a running average of its recent magnitude.\" COURSERA: Neural Networks for Machine Learning 4 (2012).</span>\n<span class=\"paragraph\">[2] Diederik Kingma and Jimmy Ba, \"Adam: A Method for Stochastic Optimization\", ICLR 2015.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "93d8506d1dc74a1e3d4c3f3865fa018f",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ecfG",
+      "code_hash": "df12915a76c250e4573fca0fc6764902",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Pvdt",
+      "code_hash": "a6214e0a7f3e3997aa87dbd75ffca004",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Once you have debugged your RMSProp and Adam implementations, run the following to train a pair of deep networks using these new update rules:</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZBYS",
+      "code_hash": "96e802bf060d546e64af8a4762f3f2de",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "aLJB",
+      "code_hash": "748f8d633e457ba41893f0058e1cbd0a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"inline-question-2\">Inline Question 2:</h2>\n<span class=\"paragraph\">AdaGrad, like Adam, is a per-parameter optimization method that uses the following update rule:</span>\n<div class=\"language-scdoc codehilite\"><pre><span></span><code>cache += dw**2\nw += - learning_rate * dw / (np.sqrt(cache) + eps)\n</code></pre></div>\n<span class=\"paragraph\">John notices that when he was training a network with AdaGrad that the updates became very small, and that his network was learning slowly. Using your knowledge of the AdaGrad update rule, why do you think the updates would become very small? Would Adam have the same issue?</span>\n<h2 id=\"answer\">Answer:</h2>\n<span class=\"paragraph\">[FILL THIS IN]</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nHfw",
+      "code_hash": "ffc38770ae42e7f3282832d81d9d47f8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"train-a-good-model\">Train a Good Model!</h1>\n<span class=\"paragraph\">Train the best fully connected model that you can on CIFAR-10, storing your best model in the <code>best_model</code> variable. We require you to get at least 50% accuracy on the validation set using a fully connected network.</span>\n<span class=\"paragraph\">If you are careful it should be possible to get accuracies above 55%, but we don't require it for this part and won't assign extra credit for doing so. Later in the assignment we will ask you to train the best convolutional network that you can on CIFAR-10, and we would prefer that you spend your effort working on convolutional networks rather than fully connected networks.</span>\n<span class=\"paragraph\"><strong>Note:</strong> You might find it useful to complete the <code>BatchNormalization.ipynb</code> and <code>Dropout.ipynb</code> notebooks before completing this part, since those techniques can help you train powerful models.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "xXTn",
+      "code_hash": "5d34082b87db497f7f2455cc000c6e26",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "AjVT",
+      "code_hash": "b925a1fd07c0e6225b2de6639b0acbf5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"test-your-model\">Test Your Model!</h1>\n<span class=\"paragraph\">Run your best model on the validation and test sets. You should achieve at least 50% accuracy on the validation set.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "pHFh",
+      "code_hash": "e5047b6f8b8ea4875c0f88dda0a0daba",
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
